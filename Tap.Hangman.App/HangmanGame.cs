@@ -15,7 +15,7 @@
             ClearWordState();
         }
 
-        public int RemainingLives { get; set; }
+        internal int RemainingLives { get; set; }
 
         public GameState GameState
         {
