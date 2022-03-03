@@ -5,17 +5,30 @@
         private string word;
         private SortedSet<char> matchedCharacters;
         private char[] wordState;
-
+     private protected virtual  List<string> Listofwords
+        {
+            get
+            {
+                List<string> newords = new List<string>();
+                newords.Add("happy");
+                newords.Add("spring");
+                newords.Add("students");
+                return newords;
+            }
+            
+        }
         public HangmanGame()
         {
+            
+
             word = "computer";
             RemainingLives = 5;
             matchedCharacters = new SortedSet<char>();
             wordState = word.ToCharArray();
             ClearWordState();
+            word = Listofwords.First();
         }
-
-        internal int RemainingLives { get; set; }
+        public int RemainingLives { get; private set; }
 
         public GameState GameState
         {
